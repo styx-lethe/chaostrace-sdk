@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaostrace"
+version = "0.1.0"
+description = "Drop-in SDK for chaos trace — governance and observability for AI agents."
+readme = "README.md"
+authors = [{ name = "chaos trace", email = "support@chaostrace.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+]
+keywords = ["anthropic", "openai", "ai", "ai-governance", "ai-monitoring", "agent-observability", "chaostrace"]
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.39"]
+openai = ["openai>=1.0"]
+all = ["anthropic>=0.39", "openai>=1.0"]
+
+[project.urls]
+Homepage = "https://chaostrace.com"
+Source = "https://github.com/styx-lethe/chaostrace-sdk"
+Documentation = "https://github.com/styx-lethe/chaostrace-sdk/blob/main/docs/integration-guide.md"
+
+[tool.setuptools.packages.find]
+include = ["chaostrace*"]

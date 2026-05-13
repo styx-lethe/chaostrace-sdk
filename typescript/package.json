@@ -1,0 +1,54 @@
+{
+  "name": "@chaostrace/sdk",
+  "version": "0.1.0",
+  "description": "Drop-in SDK for chaos trace — governance and observability for AI agents.",
+  "license": "MIT",
+  "homepage": "https://chaostrace.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/styx-lethe/chaostrace-sdk.git",
+    "directory": "typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/styx-lethe/chaostrace-sdk/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "anthropic",
+    "openai",
+    "ai",
+    "ai-governance",
+    "ai-monitoring",
+    "agent-observability",
+    "chaostrace"
+  ],
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.20.0",
+    "openai": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": { "optional": true },
+    "openai": { "optional": true }
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
