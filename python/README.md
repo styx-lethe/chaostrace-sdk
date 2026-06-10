@@ -93,7 +93,7 @@ proceed_with_write()
 
 | Argument | Required | Description |
 |---|---|---|
-| `chaostrace_api_key` | yes | Your chaos trace tenant API key. Get one at chaostrace.com/settings. |
+| `chaostrace_api_key` | yes | Your chaos trace tenant API key, provisioned by your chaos trace administrator during onboarding. |
 | `caller_tag` | recommended | A label for this client, e.g. `"sales-rep-bot"`. Surfaces in the chaos trace dashboard. |
 | `chaostrace_api_url` | no | Defaults to `https://api.chaostrace.com`. Override for self-hosted. |
 

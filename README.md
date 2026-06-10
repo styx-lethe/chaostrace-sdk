@@ -18,6 +18,15 @@ pip install chaostrace
 npm install @chaostrace/sdk
 ```
 
+> **Note:** packages publishing in progress — install from source for now:
+>
+> ```bash
+> pip install "git+https://github.com/styx-lethe/chaostrace-sdk.git#subdirectory=python"
+> npm install github:styx-lethe/chaostrace-sdk
+> ```
+
+You'll need a chaos trace API key — keys are provisioned by your chaos trace administrator during onboarding (contact chaos trace to get one).
+
 ## Two-line integration (Python)
 
 ```python
@@ -25,7 +34,7 @@ from chaostrace import Anthropic  # was: from anthropic import Anthropic
 
 client = Anthropic(
     api_key="sk-ant-...",
-    chaostrace_api_key="ct_tenant_xyz",  # from your chaos trace dashboard
+    chaostrace_api_key="ct_tenant_xyz",  # provisioned during onboarding
     caller_tag="sales-rep-bot",          # name this agent
 )
 

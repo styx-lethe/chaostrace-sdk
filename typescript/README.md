@@ -89,7 +89,7 @@ await proceedWithWrite()
 
 | Option | Required | Description |
 |---|---|---|
-| `chaostraceApiKey` | yes | Your chaos trace tenant API key. Get one at chaostrace.com/settings. |
+| `chaostraceApiKey` | yes | Your chaos trace tenant API key, provisioned by your chaos trace administrator during onboarding. |
 | `callerTag` | recommended | A label for this client. Surfaces in the dashboard. |
 | `chaostraceApiUrl` | no | Defaults to `https://api.chaostrace.com`. |
 

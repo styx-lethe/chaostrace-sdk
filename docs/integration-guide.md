@@ -13,7 +13,7 @@ Pick whichever fits your code. You can mix and match — telemetry on one client
 ## Before you start
 
 1. A chaos trace account at [chaostrace.com](https://chaostrace.com).
-2. A tenant API key from `chaostrace.com/settings`. Looks like `ct_tenant_...`.
+2. A tenant API key, provisioned by your chaos trace administrator during onboarding (contact chaos trace if you don't have one). Looks like `ct_tenant_...`.
 3. An agent that uses Anthropic or OpenAI (or both).
 
 You'll also want one stable label per agent — your `caller_tag`. Examples: `"sales-rep-bot"`, `"lead-router"`, `"clay-enrichment"`. This is how agents appear in your chaos trace dashboard.
@@ -403,7 +403,7 @@ The chaos trace endpoint targets p99 < 500ms. Outages should be rare; failure ha
 
 **`401 Missing X-API-Key header` from `/api/agents/intent`** — the SDK isn't picking up your key. Check that `chaostrace_api_key` is being passed in, not the Anthropic / OpenAI key by mistake.
 
-**`401 Invalid API key`** — the key value is wrong. Regenerate at `chaostrace.com/settings`.
+**`401 Invalid API key`** — the key value is wrong. Contact your chaos trace administrator for a replacement key.
 
 **Verdicts always come back `allow`** — chaos trace's default behavior when no policy matches. Tenant-defined policies in `agent_policies` are evaluated first; built-in defaults (Closed Won protection, OwnerId warn, low-confidence warn, bulk-volume warn) catch the most common cases. To add tenant policies, see `chaostrace.com/settings/policies`.
 
